@@ -1,0 +1,5 @@
+include ':application', ':library'
+
+if(file('pins').exists()) {
+    include ':pins'
+}

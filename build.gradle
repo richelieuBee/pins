@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        maven {//本地Maven仓库地址
+            url uri('./plugins/pins')
+        }
+        jcenter()
+        google()
+        mavenCentral() // add repository
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.richelieu.tools.plugins:pins:1.0.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral() // add repository
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

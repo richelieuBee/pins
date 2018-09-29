@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.richelieu.pins.phone.presenter">
+
+  <application>
+
+    <receiver android:name=".PresenterReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BATTERY_CHANGED" />
+      </intent-filter>
+    </receiver>
+
+  </application>
+
+</manifest>
